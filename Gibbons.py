@@ -6,9 +6,7 @@ def txtEdit(bad):
     with open(bad, 'r') as ff:
             datas = ff.read().split(",")
             ff.close()
-    with open('GOOD.txt', 'w') as gg:
-        for i in datas:
-            gg.write(""+ i + "\n")
+    datas = pd.Series(datas)
     print("All Done! :D")
 
 def CSVMachine(pt, dst, head):
