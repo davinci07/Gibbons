@@ -21,14 +21,6 @@ def CSVMachine(pt, dst, head):
     for j in os.listdir(dst):
         try:
             cc = pd.read_csv(dst + j, names = head)
-            #cc = cc[['Year','Time','Products', 'MIS Accounts']]
             cc.to_csv(dst + j, index = False)
         except:
             print("Failed on "+ j)
-
-
-
-pt = 'C:\\Users\\NILYSO\\P&L Dashboard Extracts\\CMA\\'
-dst = 'C:\\Users\\NILYSO\\P&L Dashboard Extracts\\CSV\\'
-head = ['Cube','Currency','NULL','Time','Year','NULL2','Products', 'MIS Accounts','Amt']
-CSVMachine(pt, dst, head)
